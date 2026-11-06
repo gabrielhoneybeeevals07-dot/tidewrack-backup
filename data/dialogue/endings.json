@@ -1,0 +1,22 @@
+{
+  "ending_believer_trusted": {
+    "speaker": "",
+    "text": "Beyond the north rocks, the light answers: three flashes, then dark. You leave Edith's ledger open beside the lamp. You cannot say where she went after the water took her out of sight. But she did not invent the answering light, and she did not leave you without a way home. You trim the wick and give her signal back.",
+    "next": null
+  },
+  "ending_believer_doubted": {
+    "speaker": "",
+    "text": "The light answers from beyond the north rocks. That much you can no longer explain away. Edith's certainty is another matter. An answer is not a welcome, and a rhythm is not a promise. You close her ledger. The lamp stays lit for anyone still on the water, but tonight you send no signal of your own.",
+    "next": null
+  },
+  "ending_skeptic_trusted": {
+    "speaker": "",
+    "text": "A break in the fog, a distant vessel, the tired eye making a pattern: there are explanations enough. None tells you what those nights cost Edith. You set her ledger where the next keeper will find it and tend the lamp as she asked. Offshore, something brightens and is gone. You keep the light.",
+    "next": null
+  },
+  "ending_skeptic_doubted": {
+    "speaker": "",
+    "text": "You watch until the answering rhythm comes apart: a distant light, the moving fog, the long pauses you had mistaken for intention. In the ledger, you write what you saw and leave the rest unanswered. Edith is still missing. Morning brings no explanation for that. You clean the glass, trim the wick, and let the lamp be a lamp.",
+    "next": null
+  }
+}
