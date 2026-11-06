@@ -24,6 +24,21 @@ func get_flag(name: String, default: Variant = false) -> Variant:
 	return flags.get(name, default)
 
 
+
+## Canonical key: believer, not believe. Empty means incomplete/invalid axes.
+func get_ending_entry() -> String:
+	var belief: Variant = get_flag("believer")
+	var skepticism: Variant = get_flag("skeptic")
+	var trust: Variant = flags.get("trusted_edith", null)
+	if typeof(belief) != TYPE_BOOL or typeof(skepticism) != TYPE_BOOL:
+		return ""
+	if typeof(trust) != TYPE_BOOL or belief == skepticism:
+		return ""
+	if belief:
+		return "ending_believer_trusted" if trust else "ending_believer_doubted"
+	return "ending_skeptic_trusted" if trust else "ending_skeptic_doubted"
+
+
 func new_game() -> void:
 	flags.clear()
 	current_scene = "res://scenes/game.tscn"

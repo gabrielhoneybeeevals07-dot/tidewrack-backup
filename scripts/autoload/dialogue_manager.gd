@@ -23,11 +23,25 @@ func start(path: String, start_id: String = "start") -> bool:
 	var graph := _load_graph(path)
 	if graph.is_empty():
 		return false
+	if not graph.has(start_id):
+		push_error("DialogueManager: missing entry node: " + start_id)
+		return false
 	_graph = graph
 	is_active = true
 	dialogue_started.emit()
 	_goto(start_id)
 	return true
+
+
+## Call from the finale trigger after the final narrative choice.
+## Invalid flags or active dialogue return false without replacing dialogue.
+func start_ending() -> bool:
+	if is_active:
+		return false
+	var entry: String = GameState.get_ending_entry()
+	if entry.is_empty():
+		return false
+	return start("res://data/dialogue/endings.json", entry)
 
 
 ## Advance a linear node (no choices). Ignored while choices are pending.
